@@ -1,0 +1,7 @@
+rule_hit,alerts,amount_at_risk,blocked,fp
+amount_spike,316,18201232.7,64,127
+device,493,6477637.79,115,194
+geo_mismatch,238,3208156.59,48,92
+new_payee,662,11838724.12,119,282
+night_burst,701,9144253.15,128,288
+velocity,1790,27519040.49,331,766
