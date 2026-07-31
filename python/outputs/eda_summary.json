@@ -1,0 +1,74 @@
+{
+  "rows": {
+    "transactions": 48000,
+    "alerts": 4200,
+    "disputes": 680
+  },
+  "date_range": {
+    "txn_min": "2025-07-15 00:00:07",
+    "txn_max": "2025-08-13 23:59:56",
+    "alert_min": "2025-07-15 00:01:32",
+    "alert_max": "2025-08-13 23:59:56"
+  },
+  "channel_mix_alerts": {
+    "UPI": 0.551,
+    "Card": 0.316,
+    "Wallet": 0.133
+  },
+  "severity_mix": {
+    "Medium": 2130,
+    "Low": 1598,
+    "High": 399,
+    "Critical": 73
+  },
+  "rule_mix": {
+    "velocity": 1790,
+    "night_burst": 701,
+    "new_payee": 662,
+    "device": 493,
+    "amount_spike": 316,
+    "geo_mismatch": 238
+  },
+  "status_mix": {
+    "Cleared": 1463,
+    "Investigating": 1038,
+    "Blocked": 805,
+    "Open": 722,
+    "Escalated": 172
+  },
+  "top_cities": {
+    "Jaipur": 316,
+    "Nagpur": 303,
+    "Chandigarh": 303,
+    "Surat": 297,
+    "Ahmedabad": 294
+  },
+  "top_mcc": {
+    "Grocery": 711,
+    "Food Delivery": 546,
+    "Fashion": 501,
+    "Fuel": 475,
+    "Electronics": 467
+  },
+  "amount_stats": {
+    "count": 4200.0,
+    "mean": 18187.87,
+    "std": 40828.21,
+    "min": 50.0,
+    "25%": 1984.84,
+    "50%": 5210.96,
+    "75%": 15549.68,
+    "max": 350000.0
+  },
+  "score_stats": {
+    "count": 4200.0,
+    "mean": 0.586,
+    "std": 0.083,
+    "min": 0.48,
+    "25%": 0.525,
+    "50%": 0.573,
+    "75%": 0.615,
+    "max": 1.0
+  },
+  "night_share": 0.675
+}

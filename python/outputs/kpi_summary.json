@@ -1,0 +1,22 @@
+{
+  "window_start": "2025-07-15",
+  "window_end": "2025-08-13",
+  "transactions": 48000,
+  "alerts": 4200,
+  "disputes": 680,
+  "high_risk_alerts": 472,
+  "blocked_alerts": 805,
+  "block_rate_pct": 19.17,
+  "false_positive_proxy": 1749,
+  "fp_rate_pct": 41.64,
+  "amount_at_risk_inr": 76389044.84,
+  "amount_at_risk_cr": 7.64,
+  "amount_at_risk_lakh": 763.89,
+  "avg_fraud_score": 0.586,
+  "alerts_per_day": 140.0,
+  "upi_share_pct": 55.1,
+  "top_city": "Jaipur",
+  "top_rule": "velocity",
+  "top_mcc": "Grocery",
+  "queue_open": 1932
+}

@@ -1,0 +1,11 @@
+{
+  "threshold": 0.55,
+  "precision": 0.458,
+  "recall": 0.497,
+  "f1": 0.477,
+  "tp": 539,
+  "fp": 639,
+  "fn": 545,
+  "tn": 46277,
+  "note": "Transparent linear feature blend \u2014 baseline for rule tuning, not a production model."
+}
