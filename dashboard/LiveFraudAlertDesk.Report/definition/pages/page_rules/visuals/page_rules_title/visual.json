@@ -1,0 +1,19 @@
+{
+  "name": "page_rules_title",
+  "position": { "x": 20, "y": 16, "z": 0, "width": 600, "height": 40, "tabOrder": 0 },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [{
+        "properties": {
+          "paragraphs": [{
+            "textRuns": [{
+              "value": "Live Fraud Alert Desk — Rule Performance",
+              "textStyle": { "fontWeight": "bold", "fontSize": "16pt", "color": "#E8EEF7" }
+            }]
+          }]
+        }
+      }]
+    }
+  }
+}

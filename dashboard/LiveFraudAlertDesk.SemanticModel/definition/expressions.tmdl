@@ -1,0 +1,2 @@
+expression WarningMessage = "Open in Power BI Desktop and refresh CSV paths relative to repo root (data/cleaned, data/marts)."
+	lineageTag: expr-warn

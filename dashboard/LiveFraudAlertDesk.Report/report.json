@@ -1,0 +1,14 @@
+{
+  "config": "{\"version\":\"5.51\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU04\",\"version\":\"5.51\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useStylableGridModern\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": "None",
+  "filters": "[]",
+  "sections": [
+    {"name":"page_exec","displayName":"Executive Overview","filters":"[]","ordinal":0,"visualContainers":[],"width":1280,"height":720,"config":"{}","displayOption":1},
+    {"name":"page_rules","displayName":"Rule Performance","filters":"[]","ordinal":1,"visualContainers":[],"width":1280,"height":720,"config":"{}","displayOption":1},
+    {"name":"page_geo","displayName":"City & Merchant","filters":"[]","ordinal":2,"visualContainers":[],"width":1280,"height":720,"config":"{}","displayOption":1},
+    {"name":"page_queue","displayName":"Analyst Queue","filters":"[]","ordinal":3,"visualContainers":[],"width":1280,"height":720,"config":"{}","displayOption":1}
+  ],
+  "pods": [],
+  "publicCustomVisuals": [],
+  "resourcePackages": []
+}

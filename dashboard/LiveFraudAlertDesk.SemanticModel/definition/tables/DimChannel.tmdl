@@ -1,0 +1,17 @@
+table DimChannel
+	lineageTag: DimChannel-tag-001
+
+	partition DimChannel = m
+		mode: import
+		source =
+			let
+			    Source = Csv.Document(File.Contents("../../data/marts/dim_channel.csv"),[Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+			    Promote = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+			in
+			    Promote
+
+	column channel
+		lineageTag: DimChannel-channel
+		dataType: string
+		summarizeBy: none
+

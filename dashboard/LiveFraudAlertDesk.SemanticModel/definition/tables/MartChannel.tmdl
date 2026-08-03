@@ -1,0 +1,42 @@
+table MartChannel
+	lineageTag: MartChannel-tag-001
+
+	partition MartChannel = m
+		mode: import
+		source =
+			let
+			    Source = Csv.Document(File.Contents("../../data/marts/mart_channel.csv"),[Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+			    Promote = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+			in
+			    Promote
+
+	column channel
+		lineageTag: MartChannel-channel
+		dataType: string
+		summarizeBy: none
+
+	column alerts
+		lineageTag: MartChannel-alerts
+		dataType: string
+		summarizeBy: none
+
+	column amount_at_risk
+		lineageTag: MartChannel-amount_at_risk
+		dataType: string
+		summarizeBy: none
+
+	column blocked
+		lineageTag: MartChannel-blocked
+		dataType: string
+		summarizeBy: none
+
+	column avg_score
+		lineageTag: MartChannel-avg_score
+		dataType: string
+		summarizeBy: none
+
+	column high_risk
+		lineageTag: MartChannel-high_risk
+		dataType: string
+		summarizeBy: none
+

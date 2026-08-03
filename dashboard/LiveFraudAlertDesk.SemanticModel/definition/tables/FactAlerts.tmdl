@@ -1,0 +1,97 @@
+table FactAlerts
+	lineageTag: FactAlerts-tag-001
+
+	partition FactAlerts = m
+		mode: import
+		source =
+			let
+			    Source = Csv.Document(File.Contents("../../data/cleaned/fact_alerts.csv"),[Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+			    Promote = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+			in
+			    Promote
+
+	column alert_id
+		lineageTag: FactAlerts-alert_id
+		dataType: string
+		summarizeBy: none
+
+	column txn_id
+		lineageTag: FactAlerts-txn_id
+		dataType: string
+		summarizeBy: none
+
+	column alert_ts
+		lineageTag: FactAlerts-alert_ts
+		dataType: string
+		summarizeBy: none
+
+	column channel
+		lineageTag: FactAlerts-channel
+		dataType: string
+		summarizeBy: none
+
+	column city
+		lineageTag: FactAlerts-city
+		dataType: string
+		summarizeBy: none
+
+	column merchant_category
+		lineageTag: FactAlerts-merchant_category
+		dataType: string
+		summarizeBy: none
+
+	column merchant_id
+		lineageTag: FactAlerts-merchant_id
+		dataType: string
+		summarizeBy: none
+
+	column customer_id
+		lineageTag: FactAlerts-customer_id
+		dataType: string
+		summarizeBy: none
+
+	column amount_inr
+		lineageTag: FactAlerts-amount_inr
+		dataType: string
+		summarizeBy: none
+
+	column fraud_score
+		lineageTag: FactAlerts-fraud_score
+		dataType: string
+		summarizeBy: none
+
+	column rule_hit
+		lineageTag: FactAlerts-rule_hit
+		dataType: string
+		summarizeBy: none
+
+	column severity
+		lineageTag: FactAlerts-severity
+		dataType: string
+		summarizeBy: none
+
+	column status
+		lineageTag: FactAlerts-status
+		dataType: string
+		summarizeBy: none
+
+	column is_false_positive
+		lineageTag: FactAlerts-is_false_positive
+		dataType: string
+		summarizeBy: none
+
+	column is_blocked
+		lineageTag: FactAlerts-is_blocked
+		dataType: string
+		summarizeBy: none
+
+	column analyst_queue
+		lineageTag: FactAlerts-analyst_queue
+		dataType: string
+		summarizeBy: none
+
+	column alert_date
+		lineageTag: FactAlerts-alert_date
+		dataType: string
+		summarizeBy: none
+

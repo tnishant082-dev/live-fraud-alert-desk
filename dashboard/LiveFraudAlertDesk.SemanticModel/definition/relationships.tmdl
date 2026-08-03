@@ -1,0 +1,7 @@
+relationship FactAlerts_DimChannel
+	fromColumn: FactAlerts.channel
+	toColumn: DimChannel.channel
+
+relationship FactAlerts_DimCity
+	fromColumn: FactAlerts.city
+	toColumn: DimCity.city

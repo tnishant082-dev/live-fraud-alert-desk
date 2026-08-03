@@ -1,0 +1,34 @@
+table _Measures
+	lineageTag: measures-tag-001
+
+	measure Alerts = COUNTROWS(FactAlerts)
+		lineageTag: m-alerts
+
+	measure HighRisk = CALCULATE(COUNTROWS(FactAlerts), FactAlerts[severity] IN {"High","Critical"})
+		lineageTag: m-highrisk
+
+	measure Blocked = SUM(FactAlerts[is_blocked])
+		lineageTag: m-blocked
+
+	measure BlockRate = DIVIDE([Blocked], [Alerts])
+		lineageTag: m-blockrate
+		formatString: 0.00%
+
+	measure AmountAtRisk = SUM(FactAlerts[amount_inr])
+		lineageTag: m-amount
+		formatString: ₹#,0
+
+	measure FPProxy = SUM(FactAlerts[is_false_positive])
+		lineageTag: m-fp
+
+	measure FPRate = DIVIDE([FPProxy], [Alerts])
+		lineageTag: m-fprate
+		formatString: 0.00%
+
+	measure AvgScore = AVERAGE(FactAlerts[fraud_score])
+		lineageTag: m-avgscore
+		formatString: 0.000
+
+	partition _Measures = m
+		mode: import
+		source = #table({}, {})

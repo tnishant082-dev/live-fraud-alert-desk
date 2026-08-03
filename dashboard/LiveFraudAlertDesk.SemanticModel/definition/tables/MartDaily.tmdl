@@ -1,0 +1,57 @@
+table MartDaily
+	lineageTag: MartDaily-tag-001
+
+	partition MartDaily = m
+		mode: import
+		source =
+			let
+			    Source = Csv.Document(File.Contents("../../data/marts/mart_daily_alerts.csv"),[Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+			    Promote = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+			in
+			    Promote
+
+	column date
+		lineageTag: MartDaily-date
+		dataType: string
+		summarizeBy: none
+
+	column alerts
+		lineageTag: MartDaily-alerts
+		dataType: string
+		summarizeBy: none
+
+	column high_risk
+		lineageTag: MartDaily-high_risk
+		dataType: string
+		summarizeBy: none
+
+	column blocked
+		lineageTag: MartDaily-blocked
+		dataType: string
+		summarizeBy: none
+
+	column false_positives
+		lineageTag: MartDaily-false_positives
+		dataType: string
+		summarizeBy: none
+
+	column amount_at_risk
+		lineageTag: MartDaily-amount_at_risk
+		dataType: string
+		summarizeBy: none
+
+	column avg_score
+		lineageTag: MartDaily-avg_score
+		dataType: string
+		summarizeBy: none
+
+	column block_rate
+		lineageTag: MartDaily-block_rate
+		dataType: string
+		summarizeBy: none
+
+	column fp_rate
+		lineageTag: MartDaily-fp_rate
+		dataType: string
+		summarizeBy: none
+

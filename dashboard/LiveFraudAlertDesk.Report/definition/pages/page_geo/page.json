@@ -1,0 +1,15 @@
+{
+  "name": "page_geo",
+  "displayName": "City & Merchant",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "objects": {
+    "background": [{
+      "properties": {
+        "color": { "solid": { "color": { "expr": { "Literal": { "Value": "'#0B1F3A'" } } } } },
+        "transparency": { "expr": { "Literal": { "Value": "0D" } } }
+      }
+    }]
+  }
+}

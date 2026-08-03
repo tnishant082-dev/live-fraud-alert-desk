@@ -1,0 +1,20 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-IN
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+annotation PBI_QueryOrder = ["FactAlerts","DimDate","DimChannel","DimCity","MartDaily","MartRule","MartChannel"]
+annotation PBI_ProTooling = ["Web.DeleteEmptyTables-2.0.0"]
+
+ref table FactAlerts
+ref table DimDate
+ref table DimChannel
+ref table DimCity
+ref table MartDaily
+ref table MartRule
+ref table MartChannel
+ref table _Measures
