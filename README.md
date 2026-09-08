@@ -55,7 +55,7 @@ Dark navy fintech ops UI with red / amber alert accents — **not** a Power BI S
 | **Merchant Hotspots** | Session merchant table + MCC / city pressure |
 | **Analyst Queue** | Priority queue sorted Critical → Low |
 
-Optional: `python python/04_live_simulator.py` refreshes `live/events_stream.csv`. The HTML still self-simulates from an embedded seed so a clone works without Python.
+The live HTML desk self-simulates from an embedded seed so a clone works without running extra scripts.
 
 ![Live Wall](./screenshots/live-wall.png)
 
@@ -101,19 +101,19 @@ Open / Investigating / Escalated cases in severity order.
 2. **Night concentration is elevated** — night_burst + new device combinations deserve a dedicated night desk playbook.
 3. **FP proxy ~42%** — cleared / soft dispositions suggest rule thresholds and merchant allow-lists need joint review with queue capacity.
 4. **UPI is volume-led (~55%)**; Card punches above weight on amount — channel-specific block policies beat one global cutoff.
-5. Transparent feature blend (`python/03_feature_engineering.py`) is a **baseline for rule tuning**, not a production model claim (F1 ~0.48 at threshold 0.55).
+5. Transparent feature blend (see `notebooks/02_feature_engineering.ipynb`) is a **baseline for rule tuning**, not a production model claim (F1 ~0.48 at threshold 0.55).
 
 ---
 
 ## Analysis process
 
-1. Generate deterministic txn / alert / dispute extracts (`python/01_generate_data.py`, seed `20250901`)
+1. Deterministic txn / alert / dispute extracts under `data/` (seed `20250901`)
 2. Clean + mart layers under `data/raw` → `data/cleaned` → `data/marts`
-3. EDA + engineered fraud score features (`python/02_eda.py`, `03_feature_engineering.py`)
+3. EDA + engineered fraud score features (`notebooks/01_eda.ipynb`, `notebooks/02_feature_engineering.ipynb`)
 4. Excel dictionary, cleaning log, KPI reconciliation (`excel/`)
 5. SQL KPI + drill-down + recon checks (`sql/`)
 6. Power BI `.pbip` snapshot for historical pages (`dashboard/`)
-7. Live HTML desk + optional stream simulator (`live/`, `python/04_live_simulator.py`)
+7. Live HTML desk (`live/`) — browser-side simulation from embedded seed
 
 ---
 
@@ -131,7 +131,7 @@ dashboard/             LiveFraudAlertDesk.pbip (snapshot report)
 data/raw|cleaned|marts CSV extracts and marts
 excel/                 dictionary + cleaning log + KPI recon
 sql/                   KPI, drill-down, recon queries
-python/                generate · EDA · features · live simulator · excel build
+notebooks/             EDA and feature-engineering notebooks
 screenshots/           live desk tabs
 artifacts/             silent demo walkthrough (mp4)
 ```
@@ -144,11 +144,7 @@ artifacts/             silent demo walkthrough (mp4)
 2. Open `dashboard/LiveFraudAlertDesk.pbip` in Power BI Desktop for the snapshot report
 3. Screenshots in `screenshots/` + video in `artifacts/live-fraud-alert-desk-demo.mp4`
 
-```bash
-pip install -r requirements.txt
-python python/01_generate_data.py   # regenerate CSVs if needed
-python python/04_live_simulator.py  # optional CSV ticker
-```
+Open `live/index.html` in a browser for the alert wall, or `dashboard/` in Power BI Desktop.
 
 ---
 
