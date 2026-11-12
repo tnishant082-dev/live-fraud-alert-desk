@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/live/alert_desk.html" },
+    { "source": "/index.html", "destination": "/live/alert_desk.html" }
+  ]
+}
