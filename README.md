@@ -1,5 +1,7 @@
 # Live Fraud Alert Desk
 
+Live demo: https://live-fraud-alert-desk.vercel.app
+
 Near-real-time **payment fraud / dispute alert wall** for a fictional India digital payments ops team (PaySecure Ops). Historical snapshot analysis in Power BI + a local browser live desk that auto-appends alerts — no cloud streaming service required.
 
 **GitHub:** [tnishant082-dev/live-fraud-alert-desk](https://github.com/tnishant082-dev/live-fraud-alert-desk)
